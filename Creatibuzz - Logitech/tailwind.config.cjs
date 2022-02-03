@@ -18,6 +18,17 @@ module.exports = {
 		fontFamily: {
 			body: "'Montserrat', sans-serif",
 		},
+		gridTemplateAreas: {
+			layout: ["header  preview", "main    preview"],
+			"layout-mobile": ["header", "preview", "main"],
+		},
+		gridTemplateColumns: {
+			layout: "46% auto",
+			"layout-mobile": "100%",
+		},
+		gridTemplateRows: {
+			layout: "max-content auto",
+		},
 	},
-	// more options here
+	plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
